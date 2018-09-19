@@ -1,0 +1,11 @@
+<head><script src="../frontedjs/include.js"></script></head>
+
+<div id="nav"></div>
+<div id="index-content">Page</div>
+<div id="footer"></div>
+
+<script>
+  include("html/headnav.html", document.getElementById("nav"));
+  include("html/footer.html", document.getElementById("footer"));
+  include("html/headers.html", document.getElementsByTagName("head")[0]);
+</script>

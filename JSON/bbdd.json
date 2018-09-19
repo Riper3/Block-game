@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Fernando",
+        "score": "30",
+        "mode": "midlevel"
+    },
+    {
+        "name": "Pepe",
+        "score": "30",
+        "mode": "midlevel"
+    },
+    {
+        "name": "Default",
+        "score": "15",
+        "mode": "easy"
+    },
+    {
+        "name": "Juanito",
+        "score": "2",
+        "mode": "easy"
+    },
+    {
+        "name": "Ejemplo",
+        "score": "2",
+        "mode": "easy"
+    },
+    {
+        "name": "Ejemplo",
+        "score": "2",
+        "mode": "easy"
+    },
+    {
+        "name": "Pepe",
+        "score": "15",
+        "mode": "easy"
+    },
+    {
+        "name": "Joan",
+        "score": "15",
+        "mode": "easy"
+    }
+]
