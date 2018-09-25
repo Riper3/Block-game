@@ -6,9 +6,9 @@
   <h2>Block game</h2>
 <div id="block"></div></div>
 <div id="board-game">
-  <span>Your current score : </span><span id="countclicks">0</span> <br />
-  <span>Mode : </span><span id="hardness"></span> <br />
-  <span>Goal : </span><span id="goal"></span>
+  <span class="board-element">Your current score : <span id="countclicks">0</span></span>
+  <span class="board-element">Mode : <span id="hardness"></span></span>
+  <span class="board-element">Goal :<span id="goal"></span></span>
 </div>
 <form action="../controllers/savescore.php" method="POST">
   <input name="score" class="forminput" id="scoreform">
@@ -19,6 +19,7 @@
       <input type="submit" id="btnform" value="Save!">
   </div>
 </form>
+  <button id="start-button" onclick="startgame()">Start</button>
 
 <div id="footer"></div>
 
