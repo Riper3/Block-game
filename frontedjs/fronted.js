@@ -1,9 +1,37 @@
 
   var countclicks = 0;
 
+  //Get hard by url
+  var hardness = window.location['href'].split("?");
+  //Hard
+  if(hardness[1] === "easy")
+  {
+    var timediv = 3000;
+    var goal = 15;
+  }
+  else if(hardness[1] === "midlevel")
+  {
+    var timediv = 1750;
+    var goal = 30;
+  }
+  else if(hardness[1] === "hard")
+  {
+    var timediv = 1000;
+    var goal = 60;
+  }
+  else if(hardness[1] === "infinity")
+  {
+    var timediv = 500;
+    var goal = 99999;
+  }
+  else
+  {
+    window.location.href = "../index.html";
+  }
+
   function startgame()
   {
-
+    var timetoclick = performance.now();
     document.getElementById("start-button").setAttribute("onclick","null")
     document.getElementById("start-button").style.display = "none";
     //show board-game
@@ -13,35 +41,9 @@
     {
       boardelements[i].style.display = 'block';
     }
-    //Get hard by url
-    var block = document.getElementById("block");
-    var hardness = window.location['href'].split("?");
 
-    // Hard
-    if(hardness[1] === "easy")
-    {
-      var timediv = 3000;
-      var goal = 15;
-    }
-    else if(hardness[1] === "midlevel")
-    {
-      var timediv = 1750;
-      var goal = 30;
-    }
-    else if(hardness[1] === "hard")
-    {
-      var timediv = 1000;
-      var goal = 60;
-    }
-    else if(hardness[1] === "infinity")
-    {
-      var timediv = 500;
-      var goal = 99999;
-    }
-    else
-    {
-      window.location.href = "../index.html";
-    }
+    var block = document.getElementById("block");
+
     // Values to show and form
     document.getElementById("hardness").innerText = hardness[1].charAt(0).toUpperCase() + hardness[1].slice(1);
     document.getElementById("goal").innerText = goal;
