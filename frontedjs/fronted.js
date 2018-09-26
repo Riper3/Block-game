@@ -1,5 +1,6 @@
 
   var countclicks = 0;
+  var timeclicks = 1;
 
   //Get hard by url
   var hardness = window.location['href'].split("?");
@@ -53,30 +54,43 @@
 
   function appendDiv()
   {
-    // Get random color
-    var letters ="0123456789ABCDEF";
-    var blockcolor = "#";
-    for (var y = 0; y < 6; y++)
+    if (timeclicks === 1)
     {
-      blockcolor += letters[Math.floor(Math.random() * 16)]
-      ;
+      timeclicks = 0;
+      // Get random color
+      var letters ="0123456789ABCDEF";
+      var blockcolor = "#";
+      for (var y = 0; y < 6; y++)
+      {
+        blockcolor += letters[Math.floor(Math.random() * 16)]
+        ;
+      }
+      block.style.backgroundColor = blockcolor;
+      block.style.visibility = "hidden";
+
+      var ptop = Math.floor(Math.random() * (25 - 0) + 0);
+      var pleft = Math.floor(Math.random() * (100 - 0) + 0);
+
+      block.style.marginLeft = pleft+"%";
+      block.style.marginTop = ptop+"%";
+
+      block.style.visibility = "visible";
+      block.setAttribute("onclick","goodclicks()");
     }
-    block.style.backgroundColor = blockcolor;
-    block.style.visibility = "hidden";
-
-    var ptop = Math.floor(Math.random() * (25 - 0) + 0);
-    var pleft = Math.floor(Math.random() * (100 - 0) + 0);
-
-    block.style.marginLeft = pleft+"%";
-    block.style.marginTop = ptop+"%";
-
-    block.style.visibility = "visible";
-    block.setAttribute("onclick","goodclicks()");
+    else
+    {
+      block.style.visibility = "hidden";
+      document.getElementById("scoreform").value = countclicks;
+      document.getElementById("modeform").value = hardness[1];
+      document.getElementById("finalgame").style.display = "block";
+      clearInterval(interval);
+    }
   }
 
   // Counts clicks and notify goal
   function goodclicks()
   {
+    ++timeclicks;
     ++countclicks;
     document.getElementById("countclicks").innerText = countclicks;
 	  block.style.visibility = "hidden";

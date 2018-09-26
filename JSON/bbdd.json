@@ -43,5 +43,10 @@
         "name": "Gg",
         "score": "15",
         "mode": "easy"
+    },
+    {
+        "name": "Pepe",
+        "score": "2",
+        "mode": "easy"
     }
 ]
