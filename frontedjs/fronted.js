@@ -1,6 +1,4 @@
 
-  import {randomColor} from 'commonfunctions';
-
   var countclicks = 0;
   var timeclicks = 1;
 
@@ -51,7 +49,7 @@
     document.getElementById("hardness").innerText = hardness[1].charAt(0).toUpperCase() + hardness[1].slice(1);
     document.getElementById("goal").innerText = goal;
 
-    var interval = setInterval(appendDiv, timediv);
+    setInterval(appendDiv, timediv);
   }
 
   function appendDiv()
@@ -59,7 +57,13 @@
     if (timeclicks === 1)
     {
       timeclicks = 0;
-      blockcolor = randomColor();
+      // Get random color
+      var letters ="0123456789ABCDEF";
+      var blockcolor = "#";
+      for (var y = 0; y < 6; y++)
+      {
+        blockcolor += letters[Math.floor(Math.random() * 16)];
+      }
       block.style.backgroundColor = blockcolor;
       block.style.visibility = "hidden";
 
@@ -78,7 +82,7 @@
       document.getElementById("scoreform").value = countclicks;
       document.getElementById("modeform").value = hardness[1];
       document.getElementById("finalgame").style.display = "block";
-      clearInterval(interval);
+      clearInterval();
     }
   }
 
