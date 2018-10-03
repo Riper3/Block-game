@@ -69,3 +69,13 @@ h2 {
   background-color:#e0e0eb;
   display: inline-block;
 }
+/* Score */
+.scorecolum{
+  margin-left: 5%;
+  width: 25%;
+  margin-top:2%;
+}
+#scorebackground
+{
+  background-color: #e0e0eb;
+}
