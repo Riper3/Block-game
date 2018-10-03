@@ -1,4 +1,6 @@
 
+  import {randomColor} from 'commonfunctions';
+
   var countclicks = 0;
   var timeclicks = 1;
 
@@ -57,14 +59,7 @@
     if (timeclicks === 1)
     {
       timeclicks = 0;
-      // Get random color
-      var letters ="0123456789ABCDEF";
-      var blockcolor = "#";
-      for (var y = 0; y < 6; y++)
-      {
-        blockcolor += letters[Math.floor(Math.random() * 16)]
-        ;
-      }
+      blockcolor = randomColor();
       block.style.backgroundColor = blockcolor;
       block.style.visibility = "hidden";
 
