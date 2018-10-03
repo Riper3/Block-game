@@ -4,16 +4,16 @@
 <div id="nav"></div>
 
 <div id="index-content">
-    <div class="col-xs-4">Name</div>
-    <div class="col-xs-4">Score</div>
-    <div class="col-xs-4">Mode</div>
+    <div class="scorecolum topscore">Name</div>
+    <div class="scorecolum topscore">Score</div>
+    <div class="scorecolum topscore">Mode</div>
 <?php
   foreach ($json as $key => $value)
   {
     echo '<div class="scorerow">';
-    echo '<div class="col-xs-4"> '.$value['name'].' </div>';
-    echo '<div class="col-xs-4"> '.$value['score'].' </div>';
-    echo '<div class="col-xs-4"> '.$value['mode'].' </div>';
+    echo '<div class="scorecolum"> '.$value['name'].' </div>';
+    echo '<div class="scorecolum"> '.$value['score'].' </div>';
+    echo '<div class="scorecolum"> '.$value['mode'].' </div>';
     echo '</div>';
   }
 ?>
