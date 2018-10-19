@@ -1,6 +1,8 @@
 var countclicks = 0;
 var timeclicks = 1;
 var interval;
+//Get hard by url
+var hardness = window.location['href'].split("?");
 
   function randomcolor()
   {
@@ -15,8 +17,6 @@ var interval;
 
   function startgame()
   {
-    //Get hard by url
-    var hardness = window.location['href'].split("?");
     //Hard
     if(hardness[1] === "easy")
     {
