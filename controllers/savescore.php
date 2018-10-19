@@ -3,7 +3,7 @@
  if(!empty($_POST['name']) && !empty($_POST['score']) && !empty($_POST['mode']))
  {
    $bbdd = "../JSON/bbdd.json";
-   
+
    $formdata = array(
     'name' => $_POST['name'],
     'score' => $_POST['score'],

@@ -9,7 +9,7 @@ span {
 .forminput {
   display:none;
 }
-#start-button, #restartbutton {
+#start-button, #restart-buttonn {
   width: 10%;
   height: 5%;
   margin-left: 45%;
@@ -43,6 +43,10 @@ span {
   position:absolute;
   top:15%;
   margin-left:45%;
+}
+#form-error {
+  font-weight: bold;
+  color: red;
 }
   /* Styles nav */
 #nav-icon {

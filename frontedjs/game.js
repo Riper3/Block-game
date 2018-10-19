@@ -90,6 +90,7 @@ var hardness = window.location['href'].split("?");
       document.getElementById("scoreform").value = countclicks;
       document.getElementById("modeform").value = hardness[1];
       document.getElementById("finalgame").style.display = "block";
+      document.getElementById("restart-buttonn").style.display = "block";
       clearInterval(interval);
     }
   }
@@ -101,7 +102,7 @@ var hardness = window.location['href'].split("?");
     ++countclicks;
     document.getElementById("countclicks").innerText = countclicks;
 	  block.style.visibility = "hidden";
-    if(countclicks === goal)
+    if(countclicks == goal.innerHTML)
     {
       document.getElementById("scoreform").value = countclicks;
       document.getElementById("modeform").value = hardness[1];
@@ -109,4 +110,31 @@ var hardness = window.location['href'].split("?");
       clearInterval(interval);
     }
     block.setAttribute("onclick","null");
+  }
+
+  function restartgame()
+  {
+    document.getElementById("finalgame").style.display = "none";
+    document.getElementById("restart-buttonn").style.display = "none";
+    timeclicks = 1;
+    countclicks = 0;
+    startgame();
+  }
+
+  function validatename()
+  {
+    var name = document.getElementById('nameform').value;
+    var score = document.getElementById('scoreform').value;
+    if(name == '')
+    {
+      var error = document.getElementById('form-error');
+      error.innerHTML = "The name can't be empty";
+      return false;
+    }
+    if(score == 0)
+    {
+      var error = document.getElementById('form-error');
+      error.innerHTML = "The score can't be 0";
+      return false;
+    }
   }

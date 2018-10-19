@@ -5,6 +5,7 @@
 <div id="blockcontainer">
   <h2>Block game</h2>
   <button id="start-button" onclick="startgame()">Start</button>
+  <button id="restart-buttonn" onclick="restartgame()" style="display:none;">Restart</button>
   <div id="block"></div>
 </div>
 <div id="board-game">
@@ -12,13 +13,14 @@
   <span class="board-element">Mode : <span id="hardness"></span></span>
   <span class="board-element">Goal :<span id="goal"></span></span>
 </div>
-<form action="../controllers/savescore.php" method="POST">
+<form action="/controllers/savescore.php" method="POST" onsubmit="return validatename()">
   <input name="score" class="forminput" id="scoreform">
   <input name="mode" class="forminput" id="modeform">
   <div id="finalgame">
-      <span>Save your record!</span> <br />
+      <span id="saveform">Save your record!</span> <br />
       <input name="name" id="nameform" placeholder="What is your name?">
       <input type="submit" id="btnform" value="Save!">
+      <p id="form-error"></p>
   </div>
 </form>
 

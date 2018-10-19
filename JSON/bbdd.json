@@ -53,5 +53,25 @@
         "name": "Ripeeer",
         "score": "17",
         "mode": "hard"
+    },
+    {
+        "name": "dsa",
+        "score": "0",
+        "mode": "infinity"
+    },
+    {
+        "name": "Test",
+        "score": "1",
+        "mode": "easy"
+    },
+    {
+        "name": "Test",
+        "score": "2",
+        "mode": "hard"
+    },
+    {
+        "name": "ss",
+        "score": "24",
+        "mode": "easy"
     }
 ]
