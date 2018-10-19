@@ -9,6 +9,14 @@ span {
 .forminput {
   display:none;
 }
+#start-button, #restartbutton {
+  width: 10%;
+  height: 5%;
+  margin-left: 45%;
+  margin-right: 45%;
+  margin-top: 15%;
+  font-weight: bold;
+}
 #blockcontainer {
   width:100%;
   height:80%;

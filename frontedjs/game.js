@@ -44,8 +44,9 @@ var hardness = window.location['href'].split("?");
     }
 
     var timetoclick = performance.now();
-    document.getElementById("start-button").setAttribute("onclick","null")
-    document.getElementById("start-button").style.display = "none";
+    var button = document.getElementById("start-button");
+    button.setAttribute("onclick","null")
+    button.style.display = "none";
     document.getElementsByTagName("h2")[0].style.display = "none";
     //show board-game
     var boardelements = document.getElementsByClassName("board-element");

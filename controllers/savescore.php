@@ -1,27 +1,35 @@
 <?php
- $bbdd = "../JSON/bbdd.json";
 
- $formdata = array(
-  'name' => $_POST['name'],
-  'score' => $_POST['score'],
-  'mode' => $_POST['mode']
- );
+ if(!empty($_POST['name']) && !empty($_POST['score']) && !empty($_POST['mode']))
+ {
+   $bbdd = "../JSON/bbdd.json";
+   
+   $formdata = array(
+    'name' => $_POST['name'],
+    'score' => $_POST['score'],
+    'mode' => $_POST['mode']
+   );
 
- $jsondata = file_get_contents($bbdd);
+   $jsondata = file_get_contents($bbdd);
 
- $data = json_decode($jsondata, true);
+   $data = json_decode($jsondata, true);
 
- array_push($data, $formdata);
+   array_push($data, $formdata);
 
- $jsondata = json_encode($data, JSON_PRETTY_PRINT);
+   $jsondata = json_encode($data, JSON_PRETTY_PRINT);
 
- if(file_put_contents($bbdd, $jsondata))
-  {
-	  echo 'Data successfully saved';
-	}
+   if(file_put_contents($bbdd, $jsondata))
+    {
+  	  echo 'Data successfully saved';
+  	}
+    else
+    {
+      echo "Error";
+    }
+    header("Location: /index.html");
+    exit;
+  }
   else
   {
-    echo "Error";
+    echo "Bad request";
   }
-  header("Location: /index.html");
-  exit;
