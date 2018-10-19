@@ -1,40 +1,52 @@
+var countclicks = 0;
+var timeclicks = 1;
+var interval;
 
-  var countclicks = 0;
-  var timeclicks = 1;
-
-  //Get hard by url
-  var hardness = window.location['href'].split("?");
-  //Hard
-  if(hardness[1] === "easy")
+  function randomcolor()
   {
-    var timediv = 3000;
-    var goal = 15;
-  }
-  else if(hardness[1] === "midlevel")
-  {
-    var timediv = 1750;
-    var goal = 30;
-  }
-  else if(hardness[1] === "hard")
-  {
-    var timediv = 1000;
-    var goal = 60;
-  }
-  else if(hardness[1] === "infinity")
-  {
-    var timediv = 500;
-    var goal = 99999;
-  }
-  else
-  {
-    window.location.href = "../index.html";
+    var letters ="0123456789ABCDEF";
+    var blockcolor = "#";
+    for (var y = 0; y < 6; y++)
+    {
+      blockcolor += letters[Math.floor(Math.random() * 16)];
+    }
+    return blockcolor;
   }
 
   function startgame()
   {
+    //Get hard by url
+    var hardness = window.location['href'].split("?");
+    //Hard
+    if(hardness[1] === "easy")
+    {
+      var timediv = 3000;
+      var goal = 15;
+    }
+    else if(hardness[1] === "midlevel")
+    {
+      var timediv = 1750;
+      var goal = 30;
+    }
+    else if(hardness[1] === "hard")
+    {
+      var timediv = 1000;
+      var goal = 60;
+    }
+    else if(hardness[1] === "infinity")
+    {
+      var timediv = 500;
+      var goal = 99999;
+    }
+    else
+    {
+      window.location.href = "../index.html";
+    }
+
     var timetoclick = performance.now();
     document.getElementById("start-button").setAttribute("onclick","null")
     document.getElementById("start-button").style.display = "none";
+    document.getElementsByTagName("h2")[0].style.display = "none";
     //show board-game
     var boardelements = document.getElementsByClassName("board-element");
     var lengthboardelements = boardelements.length;
@@ -49,7 +61,7 @@
     document.getElementById("hardness").innerText = hardness[1].charAt(0).toUpperCase() + hardness[1].slice(1);
     document.getElementById("goal").innerText = goal;
 
-    setInterval(appendDiv, timediv);
+    interval = setInterval(appendDiv, timediv);
   }
 
   function appendDiv()
@@ -58,13 +70,8 @@
     {
       timeclicks = 0;
       // Get random color
-      var letters ="0123456789ABCDEF";
-      var blockcolor = "#";
-      for (var y = 0; y < 6; y++)
-      {
-        blockcolor += letters[Math.floor(Math.random() * 16)];
-      }
-      block.style.backgroundColor = blockcolor;
+      block.style.backgroundColor = randomcolor();
+      block.style.border = "solid 2px"+ randomcolor();
       block.style.visibility = "hidden";
 
       var ptop = Math.floor(Math.random() * (25 - 0) + 0);
@@ -82,7 +89,7 @@
       document.getElementById("scoreform").value = countclicks;
       document.getElementById("modeform").value = hardness[1];
       document.getElementById("finalgame").style.display = "block";
-      clearInterval();
+      clearInterval(interval);
     }
   }
 

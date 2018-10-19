@@ -1,11 +1,14 @@
-<head><script src="frontedjs/include.js"></script></head>
+<head>
+  <script src="frontedjs/include.js"></script>
+</head>
 
 <div id="nav"></div>
 
 <div id="index-content">
-<div>
-HI
-</div>
+  <div class="index-div">
+    <div onmouseover="stopindexeffects()" onmouseout="startindexeffects()" id="index-block"></div>
+    <span class="index-text"> What is Block Game? Block Game is a simple web to show my different IT skils like javascript, php and others.</span>
+  </div>
 </div>
 
 <div id="footer"></div>
@@ -14,4 +17,9 @@ HI
   include("views/headnav.html", document.getElementById("nav"));
   include("views/footer.html", document.getElementById("footer"));
   include("views/headers.html", document.getElementsByTagName("head")[0]);
+
+  var script = document.createElement('script');
+  script.src = '/frontedjs/index.js';
+
+  document.getElementsByTagName('head')[0].appendChild(script);
 </script>

@@ -48,5 +48,10 @@
         "name": "Pepe",
         "score": "2",
         "mode": "easy"
+    },
+    {
+        "name": "Ripeeer",
+        "score": "17",
+        "mode": "hard"
     }
 ]
