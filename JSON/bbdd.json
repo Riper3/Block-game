@@ -1,77 +1,14 @@
 [
     {
-        "name": "Fernando",
-        "score": "30",
-        "mode": "midlevel"
-    },
-    {
-        "name": "Pepe",
-        "score": "30",
-        "mode": "midlevel"
-    },
-    {
-        "name": "Default",
-        "score": "15",
-        "mode": "easy"
-    },
-    {
-        "name": "Juanito",
-        "score": "2",
-        "mode": "easy"
-    },
-    {
-        "name": "Ejemplo",
-        "score": "2",
-        "mode": "easy"
-    },
-    {
-        "name": "Ejemplo",
-        "score": "2",
-        "mode": "easy"
-    },
-    {
-        "name": "Pepe",
-        "score": "15",
-        "mode": "easy"
-    },
-    {
-        "name": "Joan",
-        "score": "15",
-        "mode": "easy"
-    },
-    {
-        "name": "Gg",
-        "score": "15",
-        "mode": "easy"
-    },
-    {
-        "name": "Pepe",
-        "score": "2",
-        "mode": "easy"
+        "name": "Ripeeer",
+        "score": "1",
+        "mode": "midlevel",
+        "seconds": "5"
     },
     {
         "name": "Ripeeer",
-        "score": "17",
-        "mode": "hard"
-    },
-    {
-        "name": "dsa",
-        "score": "0",
-        "mode": "infinity"
-    },
-    {
-        "name": "Test",
-        "score": "1",
-        "mode": "easy"
-    },
-    {
-        "name": "Test",
-        "score": "2",
-        "mode": "hard"
-    },
-    {
-        "name": "ss",
-        "score": "24",
-        "mode": "easy"
+        "score": "12",
+        "mode": "hard",
+        "seconds": "14"
     }
 ]

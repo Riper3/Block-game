@@ -7,6 +7,7 @@
     <div class="scorecolum topscore">Name</div>
     <div class="scorecolum topscore">Score</div>
     <div class="scorecolum topscore">Mode</div>
+    <div class="scorecolum topscore">Seconds</div>
 <?php
   foreach ($json as $key => $value)
   {
@@ -14,6 +15,7 @@
     echo '<div class="scorecolum"> '.$value['name'].' </div>';
     echo '<div class="scorecolum"> '.$value['score'].' </div>';
     echo '<div class="scorecolum"> '.$value['mode'].' </div>';
+    echo '<div class="scorecolum"> '.$value['seconds'].' </div>';
     echo '</div>';
   }
 ?>

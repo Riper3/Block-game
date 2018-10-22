@@ -1,6 +1,7 @@
 var countclicks = 0;
 var timeclicks = 1;
 var interval;
+var seconds = 0;
 //Get hard by url
 var hardness = window.location['href'].split("?");
 
@@ -62,6 +63,7 @@ var hardness = window.location['href'].split("?");
     document.getElementById("hardness").innerText = hardness[1].charAt(0).toUpperCase() + hardness[1].slice(1);
     document.getElementById("goal").innerText = goal;
 
+    intervalseconds = setInterval(countseconds, 1000);
     interval = setInterval(appendDiv, timediv);
   }
 
@@ -89,6 +91,7 @@ var hardness = window.location['href'].split("?");
       block.style.visibility = "hidden";
       document.getElementById("scoreform").value = countclicks;
       document.getElementById("modeform").value = hardness[1];
+      document.getElementById("timeform").value = seconds;
       document.getElementById("finalgame").style.display = "block";
       document.getElementById("restart-buttonn").style.display = "block";
       clearInterval(interval);
@@ -121,6 +124,10 @@ var hardness = window.location['href'].split("?");
     startgame();
   }
 
+  function countseconds()
+  {
+    seconds++;
+  }
   function validatename()
   {
     var name = document.getElementById('nameform').value;

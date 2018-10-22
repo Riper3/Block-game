@@ -7,7 +7,8 @@
    $formdata = array(
     'name' => $_POST['name'],
     'score' => $_POST['score'],
-    'mode' => $_POST['mode']
+    'mode' => $_POST['mode'],
+    'seconds' => $_POST['seconds']
    );
 
    $jsondata = file_get_contents($bbdd);
