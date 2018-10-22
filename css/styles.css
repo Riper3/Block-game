@@ -9,7 +9,7 @@ span {
 .forminput {
   display:none;
 }
-#start-button, #restart-buttonn {
+#start-button {
   width: 10%;
   height: 5%;
   margin-left: 45%;
@@ -42,7 +42,18 @@ span {
   height:20%;
   position:absolute;
   top:15%;
-  margin-left:45%;
+  margin-left: 35%;
+  text-align: center;
+  background-color: white;
+}
+#finalgame input {
+  margin-top: 4%;
+}
+.finalbuttons  {
+  background-color: #808080;
+  color: white;
+  min-height: 15%;
+  min-width: 50%;
 }
 #form-error {
   font-weight: bold;

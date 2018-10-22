@@ -5,7 +5,6 @@
 <div id="blockcontainer">
   <h2>Block game</h2>
   <button id="start-button" onclick="startgame()">Start</button>
-  <button id="restart-buttonn" onclick="restartgame()" style="display:none;">Restart</button>
   <div id="block"></div>
 </div>
 <div id="board-game">
@@ -20,8 +19,9 @@
   <div id="finalgame">
       <span id="saveform">Save your record!</span> <br />
       <input name="name" id="nameform" placeholder="What is your name?">
-      <input type="submit" id="btnform" value="Save!">
       <p id="form-error"></p>
+      <input type="submit" class="finalbuttons" id="btnform" value="Save!">
+      <input type="button" class="finalbuttons" id="restart-buttonn" onclick="restartgame()" value="Restart"></input>
   </div>
 </form>
 

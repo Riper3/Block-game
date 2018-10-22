@@ -93,7 +93,6 @@ var hardness = window.location['href'].split("?");
       document.getElementById("modeform").value = hardness[1];
       document.getElementById("timeform").value = seconds;
       document.getElementById("finalgame").style.display = "block";
-      document.getElementById("restart-buttonn").style.display = "block";
       clearInterval(interval);
     }
   }
@@ -118,7 +117,6 @@ var hardness = window.location['href'].split("?");
   function restartgame()
   {
     document.getElementById("finalgame").style.display = "none";
-    document.getElementById("restart-buttonn").style.display = "none";
     timeclicks = 1;
     countclicks = 0;
     seconds = 0;
