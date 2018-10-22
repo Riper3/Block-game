@@ -39,6 +39,8 @@ span {
 #finalgame {
   display:none;
   width:20%;
+  min-width:300px;
+  min-height:180px;
   height:20%;
   position:absolute;
   top:20%;
