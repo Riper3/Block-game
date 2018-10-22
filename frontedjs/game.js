@@ -127,6 +127,7 @@ var hardness = window.location['href'].split("?");
   {
     seconds++;
   }
+  
   function validatename()
   {
     var name = document.getElementById('nameform').value;
