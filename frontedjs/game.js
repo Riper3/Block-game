@@ -121,6 +121,7 @@ var hardness = window.location['href'].split("?");
     document.getElementById("restart-buttonn").style.display = "none";
     timeclicks = 1;
     countclicks = 0;
+    seconds = 0;
     startgame();
   }
 
