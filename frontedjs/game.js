@@ -94,6 +94,7 @@ var hardness = window.location['href'].split("?");
       document.getElementById("timeform").value = seconds;
       document.getElementById("finalgame").style.display = "block";
       clearInterval(interval);
+      clearInterval(intervalseconds);
     }
   }
 
@@ -108,8 +109,10 @@ var hardness = window.location['href'].split("?");
     {
       document.getElementById("scoreform").value = countclicks;
       document.getElementById("modeform").value = hardness[1];
+      document.getElementById("timeform").value = seconds;
       document.getElementById("finalgame").style.display = "block";
       clearInterval(interval);
+      clearInterval(intervalseconds);
     }
     block.setAttribute("onclick","null");
   }
@@ -126,8 +129,9 @@ var hardness = window.location['href'].split("?");
   function countseconds()
   {
     seconds++;
+    console.log(seconds);
   }
-  
+
   function validatename()
   {
     var name = document.getElementById('nameform').value;
