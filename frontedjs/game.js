@@ -129,7 +129,6 @@ var hardness = window.location['href'].split("?");
   function countseconds()
   {
     seconds++;
-    console.log(seconds);
   }
 
   function validatename()
