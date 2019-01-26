@@ -79,7 +79,7 @@ var hardness = window.location['href'].split("?");
       block.style.visibility = "hidden";
 
       var ptop = Math.floor(Math.random() * (25 - 0) + 0);
-      var pleft = Math.floor(Math.random() * (100 - 0) + 0);
+      var pleft = Math.floor(Math.random() * (90 - 0) + 0);
 
       block.style.marginLeft = pleft+"%";
       block.style.marginTop = ptop+"%";

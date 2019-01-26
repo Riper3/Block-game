@@ -81,6 +81,7 @@ span {
 .nav-list {
   margin-left: 5%;
   margin-top: 1%;
+  text-align: center;
 }
 .nav {
   width:100%;
@@ -103,7 +104,8 @@ span {
   display: inline-block;
 }
 #index-block {
-  float:left;
+  margin-left: 45%;
+  margin-bottom: 15px;
 }
 .index-text {
   float: left;
