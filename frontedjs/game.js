@@ -1,6 +1,7 @@
 var countclicks = 0;
 var timeclicks = 1;
 var interval;
+var timediv;
 var seconds = 0;
 //Get hard by url
 var hardness = window.location['href'].split("?");
@@ -21,22 +22,22 @@ var hardness = window.location['href'].split("?");
     //Hard
     if(hardness[1] === "easy")
     {
-      var timediv = 3000;
+      timediv = 3000;
       var goal = 15;
     }
     else if(hardness[1] === "midlevel")
     {
-      var timediv = 1750;
+      timediv = 1750;
       var goal = 30;
     }
     else if(hardness[1] === "hard")
     {
-      var timediv = 1000;
+      timediv = 1000;
       var goal = 60;
     }
     else if(hardness[1] === "infinity")
     {
-      var timediv = 500;
+      timediv = 3000;
       var goal = 99999;
     }
     else
@@ -85,6 +86,13 @@ var hardness = window.location['href'].split("?");
 
       block.style.visibility = "visible";
       block.setAttribute("onclick","goodclicks()");
+
+      if(hardness[1] === "infinity")
+      {
+        timediv = timediv - (timediv * 0.05);
+        clearInterval(interval);
+        interval = setInterval(appendDiv, timediv);
+      }
     }
     else
     {
